@@ -10,6 +10,13 @@ on:
       - develop
     types: [closed]
 
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Please, enter your name and surname'
+        default: 'Имя Фамилия'
+        required: true
+
 env:
   DEPLOY_PATH: MSPP
 
