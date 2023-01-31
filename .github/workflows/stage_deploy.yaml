@@ -7,7 +7,7 @@ on:
       - develop
 
 env:
-  DEPLOY_PATH: /MSPP
+  DEPLOY_PATH: MSPP
 
 jobs:
 # 
