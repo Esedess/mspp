@@ -7,11 +7,11 @@ on:
     types: [closed]
 
 env:
-  DEPLOY_PATH: /MSPP
+  DEPLOY_PATH: MSPP
 
-defaults:
-  run:
-    working-directory: .
+# defaults:
+#   run:
+#     working-directory: .
 
 jobs:
   deploy:
