@@ -9,9 +9,9 @@ on:
 env:
   DEPLOY_PATH: MSPP
 
-# defaults:
-#   run:
-#     working-directory: .
+defaults:
+  run:
+    working-directory: .
 
 jobs:
   deploy:
@@ -36,4 +36,5 @@ jobs:
             mkdir -p ${{ env.DEPLOY_PATH }}
             cd ${{ env.DEPLOY_PATH }}
             echo DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} >> .env-stage
+            systemctl daemon-reload
 
