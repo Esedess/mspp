@@ -1,5 +1,9 @@
 name: Stage Deploy
 
+concurrency:
+  group: stage_deploy
+  cancel-in-progress: true
+
 on:
   pull_request:
     branches:
@@ -36,5 +40,4 @@ jobs:
             mkdir -p ${{ env.DEPLOY_PATH }}
             cd ${{ env.DEPLOY_PATH }}
             echo DJANGO_SECRET_KEY=${{ secrets.DJANGO_SECRET_KEY }} >> .env-stage
-            sudo systemctl daemon-reload
 
